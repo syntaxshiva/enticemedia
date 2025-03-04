@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #000000, #111a46);
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        /* Work Section */
+        .work-section {
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .work-card {
+            width: 400px;
+            height: 200px;
+            background: linear-gradient(135deg, #164633, #164633);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+            transform: rotate3d(1, 1, 1, 2deg);
+            h1{
+                font-size: 1.3em;
+            }
+            p{
+                font-size: 1em;
+                opacity: .7;
+            }
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Partnership Section */
+        .partners {
+            
+            padding: 50px 20px;
+            background-color: #000000;
+        }
+
+        .partners h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: wheat;
+        }
+
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 2em;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .partner-logos div {
+            width: 350px;
+            height: 500px;
+            
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .partner-logos div:hover {
+            transform: scale(1.05);
+        }
+
+        /* Case Studies */
+        .case-study {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .case-study h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .case-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            text-align: left;
+            margin: auto;
+        }
+
+        .case {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .case:hover {
+            transform: translateY(-5px);
+        }
+
+        .case h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .case p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .partners h2,
+            .case-study h2 {
+                font-size: 2em;
+            }
+
+            .case-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .work-card {flex-direction: column;
+                width: 90%;
+                height: 150px;
+            }
+
+            .case {
+                width: 90%;
+            }
+
+            .partner-logos div {
+
+                font-size: .7em;
+                width: 350px;
+            height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section class="header">
+        <h1>Our Confidence</h1>
+        <p>Helping brands and Agencies</p>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-section">
+        <div class="work-card"><h1>SEO Optimization</h1>
+            <p>Boost your search engine rankings</p>
+        </div>
+        <div class="work-card"><h1>Meta Ads</h1>
+            <p>Reach your audience with targeted ads</p>
+        </div>
+        <div class="work-card"><h1>Social Media Management</h1>
+            <p>Grow your brand on social platforms</p>
+        </div>
+        <div class="work-card"><h1>Pay-Per-Click Advertising</h1>
+            <p>Maximize your ROI with targeted ads</p>
+        </div>
+        <div class="work-card"><h1>SaaS Solutions</h1>
+            <p>Innovative software as a service</p>
+        </div>
+        
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partners">
+        <h2>Our Trusted Partners</h2>
+        <p style="font-size: 1.5em; color: white; margin-bottom: 20px;">Click to see</p>
+        <div class="partner-logos">
+            <div class="partner-video" style="background-color: #2e8b57;">
+            <video src="assets/shop.mp4" controls></video>
+            <div class="overlay">Mamaearth</div>
+            </div>
+            <div class="partner-video" style="background-color: #4682b4;">
+            <video src="assets/filmora.mp4" controls></video>
+            <div class="overlay">Filmora</div>
+            </div>
+            <div class="partner-video" style="background-color: #5f9ea0;">
+            <video src="assets/flip.mp4" controls></video>
+            <div class="overlay">Flipkart</div>
+            </div>
+            <div class="partner-video" style="background-color: #6a5acd;">
+            <video src="assets/sam.mp4" controls></video>
+            <div class="overlay">Samsung</div>
+            </div>
+            <div class="partner-video" style="background-color: #8b0000;">
+            <video src="assets/tech.mp4" controls></video>
+            <div class="overlay">Technology</div>
+            </div>
+            <div class="partner-video" style="background-color: #2e8b57;">
+            <video src="assets/lens.mp4" controls></video>
+            <div class="overlay">Lenskart</div>
+            </div>
+            <div class="partner-video" style="background-color: #d2691e;">
+            <video src="assets/gasify.mp4" controls></video>
+            <div class="overlay">Cashify</div>
+            </div>
+            <div class="partner-video" style="background-color: #d2691e;">
+                <video src="assets/samrat.mp4" controls></video>
+                <div class="overlay">Samrat Pay</div>
+                </div>
+            <div class="partner-video" style="background-color: #b8860b;">
+            <video src="assets/entertainment.mp4" controls></video>
+            <div class="overlay">Entertainment</div>
+            </div>
+        </div>
+
+        
+        <style>
+            .partner-video {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+            
+            }
+
+            .partner-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            
+            }
+
+            .partner-video .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 12, 69, 0.895);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            opacity: .9;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1;
+            }
+
+            .partner-video iframe {
+            z-index: 2;
+            }
+
+            .partner-video:hover .overlay,
+            .partner-video:focus .overlay {
+            opacity: 0;
+            z-index: -5;
+            }
+
+            .partner-video:hover video,
+            .partner-video:focus video {
+            display: block;
+            }
+
+            iframe{
+                height: 100%;
+                width: 100%;
+            }
+        </style></div>
+    </section>
+    <!-- YouTube Video Section -->
+<section class="youtube-videos">
+    <h2>Youtube and Us</h2>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/I85tx6K_FDI" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/_46MVUTCiAM" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/RGvn1LhmwPQ" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/o3QtbZ0DpUo" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/2SisP8CLt30" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+            <div class="overlay">Click to Play</div>
+            <iframe src="https://www.youtube.com/embed/oiVgaA29ocU" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<style>
+    .youtube-videos {
+        padding: 50px 20px;
+        background: #111;
+        color: white;
+        text-align: center;
+    }
+
+    .youtube-videos h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 1;
+    }
+
+    .video-wrapper .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .video-wrapper:hover .overlay {
+        opacity: 0;
+        z-index: -5;
+    }
+</style>
+
+    <!-- Case Studies Section -->
+    <section class="case-study">
+        <h2>Case Studies</h2>
+        <div class="case-container">
+            <div class="case">
+                <h3>Mamaearth - <strong><u>200% Growth in Sales</u></strong></h3>
+                <p>We leveraged <strong><u>influencer marketing</u></strong> to boost Mamaearth's brand visibility, resulting in a <strong><u>200% sales increase</u></strong> in 3 months. Our strategy involved collaborating with top influencers to create authentic and engaging content that resonated with their followers. This approach not only expanded Mamaearth's reach but also built trust and credibility among potential customers. The influencer campaigns were instrumental in driving traffic to the online store and converting followers into loyal customers.</p>
+            </div>
+            <div class="case">
+                <h3>Filmora - <strong><u>Video Editing Revolution</u></strong></h3>
+                <p>Utilized <strong><u>Filmora</u></strong> to create engaging promotional content, significantly increasing app downloads among video editors. Our strategy focused on showcasing Filmora's user-friendly interface and powerful editing features through targeted social media campaigns and influencer partnerships. By highlighting the app's capabilities and ease of use, we successfully attracted a large number of video editors, resulting in a substantial boost in app downloads and user engagement.</p>
+            </div>
+            <div class="case">
+                <h3>Flipkart - <strong><u>Black Friday Record Sales</u></strong></h3>
+                <p>Our <strong><u>product-focused campaigns</u></strong> propelled Flipkart's sales to new heights during Black Friday, outpacing competitors. We crafted a series of targeted promotions highlighting top-selling products and exclusive deals. Utilizing <strong><u>advanced analytics</u></strong>, we pinpointed high-potential customer segments and customized our approach to engage them effectively. The result was a significant surge in sales and overwhelmingly positive customer feedback.</p>
+            </div>
+            <div class="case">
+                <h3>TVS - <strong><u>Digital Marketing Overhaul</u></strong></h3>
+                <p>Transformed TVS's digital strategy, increasing customer engagement by <strong><u>250%</u></strong> and boosting test ride bookings. Our team developed a multi-channel marketing plan that included content marketing, social media outreach, and email campaigns. We also revamped TVS's website to provide a more interactive and informative experience for potential customers. These efforts led to a significant increase in brand awareness and customer interaction, ultimately driving more test ride bookings and sales.</p>
+            </div>
+            <div class="case">
+                <h3>Netflix - <strong><u>Content Suggestions and Promotions</u></strong></h3>
+                <p>Implemented a <strong><u>targeted marketing campaign</u></strong> to drive engagement on the platform and promote new shows. By leveraging <strong><u>social media</u></strong> and <strong><u>video clips</u></strong>, we created hype and attracted a large audience. Our strategy included releasing teaser clips, behind-the-scenes content, and exclusive interviews with cast members. This approach generated significant buzz and anticipation, leading to increased viewership and platform engagement.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
